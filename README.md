@@ -1,5 +1,4 @@
-# cheque-writing-demo
-A simple cheque writing app.
+# Cheque Writing Demo App
 
 *Technologies used:*
 - PHP, NPM, Gulp

@@ -1,0 +1,86 @@
+$bar-height: 4px;
+$bar-spacing: 12px;
+$bar-width: 40px;
+
+
+.lgaq-header__hmb-menu {
+  @include box;
+  background:transparent;
+  margin:0;
+  padding:2px;
+  
+  &__wrapper{
+    cursor: pointer;
+    height: $bar-height + $bar-spacing*2;
+    margin-left:auto;
+    width: $bar-width;
+
+    &__icon{
+      @include transform(translateY($bar-spacing));
+      background: #fff;
+      height: $bar-height;
+      position: relative;
+      width: $bar-width;
+
+      &:after,&:before{
+        @include ease-it(0.2,(top,bottom));
+        background-color:#fff;
+        content: "";
+        height: $bar-height;
+        left: 0;
+        position: absolute;
+        width: $bar-width;
+      }
+
+      &:before {
+        bottom: $bar-spacing;
+      }
+
+      &:after {
+        top: $bar-spacing;
+      }
+
+    }
+  }
+
+}
+
+
+.lgaq-header--expand{
+  .lgaq-header{
+  
+    &__hmb-menu {
+      &__wrapper{
+        
+        &__icon{
+          background: transparent; 
+          &:after {
+            @include rotate-it(45);
+            top: 0;
+          }
+
+          &:before {
+            @include rotate-it(-45);
+            bottom: 0;
+          }
+        }
+
+      }
+
+    }
+    
+    &__topnav{
+      left:0;
+      ul{
+        li{
+          a{
+            visibility:visible;
+          }
+        }
+      }
+    }
+  
+  }
+}
+
+

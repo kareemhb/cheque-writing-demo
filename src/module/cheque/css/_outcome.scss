@@ -1,0 +1,40 @@
+.cheque{
+  &__book{
+    &__body{
+      
+      .field{
+        align-items:center;
+        border-bottom:1px solid #000;
+        display:flex;
+        flex-wrap:wrap;
+        margin:10px 0;
+        &__header{
+          @include box;
+          @include rounded(8px);
+          background-color:rgba(0,0,0,0.1);
+          font-size:0.75em;
+          margin:5px 5px 5px 0;
+          padding:2px 6px;
+          white-space:nowrap;
+        }
+      }
+      
+      &__left{
+        flex-grow: 1;
+        margin:10px;
+      }
+
+      &__right{
+        margin:10px;
+        
+        &__figure{
+         border:1px solid #000;
+          @include box;
+          @include rounded(4px);
+          padding:5px;
+        }
+      }
+      
+    }
+  }
+}

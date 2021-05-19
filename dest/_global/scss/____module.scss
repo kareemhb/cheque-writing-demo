@@ -1,0 +1,307 @@
+.cheque{
+  
+  &__book{
+    &__body{
+      &__form{
+        @include box;
+        padding:10px;
+        text-align:center;
+        width:100%;
+        
+        &__header{
+          margin:10px 0;
+        }
+        
+        fieldset{
+          @include box;
+          text-align:left;
+        }
+        
+        &__q{
+          margin:10px 0;
+          
+          label{
+            @include box;
+            display:block;
+            padding:4px 2px;
+          }
+          &__input-wrapper{
+            position:relative;
+            .m{
+              color:$grey6;
+              display:block;
+              left:9px;
+              position:absolute;
+              top:9px;
+              &:after{
+                @include ease-it(0.3,(color));
+              }
+            }
+            input{
+              @include box;
+              @include rounded(4px);
+              border:1px solid $grey-l;
+              line-height:38px;
+              padding-left:40px;
+              width:100%;
+              
+              &:focus{
+                & + .m{
+                  color:$blue-d;
+                }
+              }
+            }
+          }
+        }
+
+        &__submitBtn{
+          margin:10px 0;
+        }
+      }
+    }
+  }
+  
+}
+.cheque{
+  &__book{
+    &__body{
+      
+      .field{
+        align-items:center;
+        border-bottom:1px solid #000;
+        display:flex;
+        flex-wrap:wrap;
+        margin:10px 0;
+        &__header{
+          @include box;
+          @include rounded(8px);
+          background-color:rgba(0,0,0,0.1);
+          font-size:0.75em;
+          margin:5px 5px 5px 0;
+          padding:2px 6px;
+          white-space:nowrap;
+        }
+      }
+      
+      &__left{
+        flex-grow: 1;
+        margin:10px;
+      }
+
+      &__right{
+        margin:10px;
+        
+        &__figure{
+         border:1px solid #000;
+          @include box;
+          @include rounded(4px);
+          padding:5px;
+        }
+      }
+      
+    }
+  }
+}
+.cheque{
+  
+  @include box;
+  padding: 100px 20px;
+  
+  &__container{
+    margin: 0 auto;
+    max-width:1200px;
+  }
+  
+  &__intro{
+    text-align:center;
+  }
+  
+  &__book{
+    @include rounded(8px);
+    @include shadow(0 4px 24px 0 rgba(0,0,0,0.3));
+    background-color:#fff;
+    margin:40px auto;
+    max-width:900px;
+    overflow:hidden;
+    
+    &__head{
+      height:130px;
+      overflow:hidden;
+      position:relative;
+      &:before{
+        background:  url(/image/logo-bank.jpg) center left/ contain no-repeat ;
+        content:"";
+        display:block;
+        height:80px;
+        margin:10px;
+      }
+      &:after{
+        @include rotate-it(-1);
+        background-color:$comm-d;
+        bottom:-24px;
+        content:"";
+        height:60px;
+        left:-10%;
+        position:absolute;
+        width:120%;
+      }
+    }
+    
+    &__body{
+      @include box;
+      background-color:$comm-l;
+      display:flex;
+      flex-wrap:wrap;
+      padding:10px;
+    }
+  }
+}
+
+footer{
+  @include box;
+  background-color:$grey3;
+  color:#fff;
+  padding: 30px 20px;
+  text-align:center;
+}
+$bar-height: 4px;
+$bar-spacing: 12px;
+$bar-width: 40px;
+
+
+.lgaq-header__hmb-menu {
+  @include box;
+  background:transparent;
+  margin:0;
+  padding:2px;
+  
+  &__wrapper{
+    cursor: pointer;
+    height: $bar-height + $bar-spacing*2;
+    margin-left:auto;
+    width: $bar-width;
+
+    &__icon{
+      @include transform(translateY($bar-spacing));
+      background: #fff;
+      height: $bar-height;
+      position: relative;
+      width: $bar-width;
+
+      &:after,&:before{
+        @include ease-it(0.2,(top,bottom));
+        background-color:#fff;
+        content: "";
+        height: $bar-height;
+        left: 0;
+        position: absolute;
+        width: $bar-width;
+      }
+
+      &:before {
+        bottom: $bar-spacing;
+      }
+
+      &:after {
+        top: $bar-spacing;
+      }
+
+    }
+  }
+
+}
+
+
+.lgaq-header--expand{
+  .lgaq-header{
+  
+    &__hmb-menu {
+      &__wrapper{
+        
+        &__icon{
+          background: transparent; 
+          &:after {
+            @include rotate-it(45);
+            top: 0;
+          }
+
+          &:before {
+            @include rotate-it(-45);
+            bottom: 0;
+          }
+        }
+
+      }
+
+    }
+    
+    &__topnav{
+      left:0;
+      ul{
+        li{
+          a{
+            visibility:visible;
+          }
+        }
+      }
+    }
+  
+  }
+}
+
+
+
+.lgaq-header{
+  @include box;
+  background-color:$blue-d;
+  padding: 20px;
+  
+  &__container{
+    align-items:center;
+    display:flex;
+    justify-content:space-between;
+    margin: 0 auto;
+    max-width:1200px;
+  }
+    
+  &__logo{
+    height:63px;
+    img{
+      max-width:90px;
+    }
+  }
+  
+  &__topnav{
+    @include ease-it(0.2,(left));
+    background-color:$blue-d;
+    height:100vh;
+    left:calc(-100% - 20px);
+    position:absolute;
+    top:(63+40)+px;
+    width:100%;
+    z-index:3;
+      
+    ul{
+      display:flex;
+      flex-direction:column;
+      li{
+        
+        @include ease-it(0.2,(background-color));
+        &:hover{
+          background-color:rgba(0,0,0,0.1);
+        }
+        
+        a{
+          @includ box;
+          color:#fff;
+          display:block;
+          font-weight:500;
+          padding:20px;
+          visibility:hidden;
+        }
+
+      }
+    }
+
+  }
+}

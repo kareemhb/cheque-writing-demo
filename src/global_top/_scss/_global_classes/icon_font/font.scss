@@ -1,0 +1,16 @@
+
+//icomoon Font
+@font-face {
+  font-family: 'icomoon';
+  font-style: normal;
+  font-weight: normal;
+  src:  url('/_global/fonts/icomoon/icomoon.eot?jbknnc');
+  src:  url('/_global/fonts/icomoon/icomoon.eot?jbknnc#iefix') format('embedded-opentype'),
+  url('/_global/fonts/icomoon/icomoon.woff?jbknnc') format('woff'),
+    url('/_global/fonts/icomoon/icomoon.ttf?jbknnc') format('truetype'),
+        url('/_global/fonts/icomoon/icomoon.svg?jbknnc#icomoon') format('svg');
+}
+
+@mixin icon(){
+  font-family: 'icomoon' !important;
+}

@@ -1,0 +1,100 @@
+body{
+  color:$grey2;
+  font-family:Roboto, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  margin:0;
+  overflow-x:hidden;
+  overflow-y:scroll;
+  width:100%;
+  
+  * {
+    -webkit-text-size-adjust:100%;
+    speak: none;
+    text-size-adjust:100%;
+    text-transform: none;
+  }
+
+}
+
+
+//lists
+ul{
+  line-height:inherit;
+}
+ul li{
+list-style-type: none;
+}
+ul,menu{
+    -khtml-padding-start: 0px;
+    -moz-padding-start: 0px;
+    -o-padding-start: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-before: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-padding-start: 0px;
+    font-weight:normal;
+    list-style-type: none;
+    padding-start: 0px;
+    padding: 0px;
+    text-align:left;
+}
+
+main{
+  background-color:$bluish;
+  min-height:calc(100vh - 100px);
+}
+
+
+h1,h2,h3,h4,h5,h6,h7,p{
+  margin-block-end:0;
+  margin-block-start:0;
+}
+ 
+a{
+	font-size:inherit;
+	font-weight:inherit;
+	text-decoration: none;
+}
+
+img {
+  max-height:100%;
+  max-width:100%;
+}
+
+fieldset{
+  border:0px solid transparent!important;
+  margin-inline-end:0;
+  margin-inline-start:0;
+  margin:0;
+  min-inline-size: 100%;
+  padding:0;
+}
+
+//outline
+input, textarea, select, button, a, [tabindex]{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+//border
+input,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    border: 0;
+}
+  
+
+//keyboard tab - WCAG
+.kb-tab{
+  input, textarea, select, button, a, [tabindex]{
+    &:focus{
+     @include shadow(inset 0 0 2px 2px $red!important);
+    }
+  }
+}

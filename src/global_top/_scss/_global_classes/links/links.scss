@@ -1,0 +1,38 @@
+
+
+//Link with right arrow on hover
+.arrow_link{
+  @include ease-it(0.3,(left));
+  align-items:center;
+  display:flex;
+  left:0;
+  position:relative;
+
+  &:after{
+    @include ease-it(0.3,(left,opacity,visibility));
+    @include icon;
+    $size:16;
+    color:inherit;
+    content:"\e900";
+    font-size:$size+px;
+    height:$size+px;
+    left:-10px;
+    line-height:$size+px;
+    opacity:0;
+    position:relative;
+    visibility:hidden;
+    width:$size+px;
+  }
+  
+  &:hover{
+    left:20px;
+    &:after{
+      @include ease-it-delay(0.1);
+      left:10px;
+      opacity:1;
+      visibility:visible;
+    }
+  }
+  
+}
+

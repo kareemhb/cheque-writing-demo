@@ -1,0 +1,19 @@
+//icons array
+$monos: (
+
+      "e" : (
+        arrow               : "900",     
+        user                : "901",
+        dollar              : "902",
+        ),
+);
+
+
+//Loop array to create icon classes
+@each $group, $icons in $monos {
+  @each $icon-name, $icomoon-code in $icons {
+    .m--#{$group}-#{$icon-name}:after{
+        content:#{unquote('\"')+("\\")+$group+$icomoon-code+unquote('\"')};
+    }
+  }
+}

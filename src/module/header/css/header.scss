@@ -1,0 +1,54 @@
+.lgaq-header{
+  @include box;
+  background-color:$blue-d;
+  padding: 20px;
+  
+  &__container{
+    align-items:center;
+    display:flex;
+    justify-content:space-between;
+    margin: 0 auto;
+    max-width:1200px;
+  }
+    
+  &__logo{
+    height:63px;
+    img{
+      max-width:90px;
+    }
+  }
+  
+  &__topnav{
+    @include ease-it(0.2,(left));
+    background-color:$blue-d;
+    height:100vh;
+    left:calc(-100% - 20px);
+    position:absolute;
+    top:(63+40)+px;
+    width:100%;
+    z-index:3;
+      
+    ul{
+      display:flex;
+      flex-direction:column;
+      li{
+        
+        @include ease-it(0.2,(background-color));
+        &:hover{
+          background-color:rgba(0,0,0,0.1);
+        }
+        
+        a{
+          @includ box;
+          color:#fff;
+          display:block;
+          font-weight:500;
+          padding:20px;
+          visibility:hidden;
+        }
+
+      }
+    }
+
+  }
+}

@@ -1,0 +1,64 @@
+.cheque{
+  
+  &__book{
+    &__body{
+      &__form{
+        @include box;
+        padding:10px;
+        text-align:center;
+        width:100%;
+        
+        &__header{
+          margin:10px 0;
+        }
+        
+        fieldset{
+          @include box;
+          text-align:left;
+        }
+        
+        &__q{
+          margin:10px 0;
+          
+          label{
+            @include box;
+            display:block;
+            padding:4px 2px;
+          }
+          &__input-wrapper{
+            position:relative;
+            .m{
+              color:$grey6;
+              display:block;
+              left:9px;
+              position:absolute;
+              top:9px;
+              &:after{
+                @include ease-it(0.3,(color));
+              }
+            }
+            input{
+              @include box;
+              @include rounded(4px);
+              border:1px solid $grey-l;
+              line-height:38px;
+              padding-left:40px;
+              width:100%;
+              
+              &:focus{
+                & + .m{
+                  color:$blue-d;
+                }
+              }
+            }
+          }
+        }
+
+        &__submitBtn{
+          margin:10px 0;
+        }
+      }
+    }
+  }
+  
+}

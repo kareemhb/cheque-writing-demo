@@ -1,0 +1,25 @@
+.lgaq-header{
+  
+  &__topnav{
+    height:auto;
+    padding-right:90px;
+    position:static;
+    
+    
+    ul{
+      flex-direction:row;
+      justify-content:center;
+      
+      li{
+        a{
+          padding: 10px 20px;
+          visibility:visible;
+        }
+      }
+    }
+  }
+  
+  &__hmb-menu{
+    display:none;
+  }
+}

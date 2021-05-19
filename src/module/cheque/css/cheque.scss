@@ -1,0 +1,54 @@
+.cheque{
+  
+  @include box;
+  padding: 100px 20px;
+  
+  &__container{
+    margin: 0 auto;
+    max-width:1200px;
+  }
+  
+  &__intro{
+    text-align:center;
+  }
+  
+  &__book{
+    @include rounded(8px);
+    @include shadow(0 4px 24px 0 rgba(0,0,0,0.3));
+    background-color:#fff;
+    margin:40px auto;
+    max-width:900px;
+    overflow:hidden;
+    
+    &__head{
+      height:130px;
+      overflow:hidden;
+      position:relative;
+      &:before{
+        background:  url(/image/logo-bank.jpg) center left/ contain no-repeat ;
+        content:"";
+        display:block;
+        height:80px;
+        margin:10px;
+      }
+      &:after{
+        @include rotate-it(-1);
+        background-color:$comm-d;
+        bottom:-24px;
+        content:"";
+        height:60px;
+        left:-10%;
+        position:absolute;
+        width:120%;
+      }
+    }
+    
+    &__body{
+      @include box;
+      background-color:$comm-l;
+      display:flex;
+      flex-wrap:wrap;
+      padding:10px;
+    }
+  }
+}

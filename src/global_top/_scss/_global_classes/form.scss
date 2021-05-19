@@ -1,0 +1,29 @@
+//FORM
+//form error message
+.ferror{
+  @include box;
+  @include rounded(4px);
+  @include shadow(0 2px 4px 0 rgba(0,0,0,0.3));
+  background:$red-d;
+  color:#fff;
+  display:inline-block;
+  font-size:0.9em;
+  font-weight:700;
+  margin:3px 0 0 4px;
+  padding:4px 8px;
+  position:relative;
+  
+  //arrow
+  &:after{
+    border-bottom: 8px solid $red-d;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    content:"";
+    height: 0; 
+    left:8px;
+    position:absolute;
+    top:-5px;
+    width: 0; 
+  }
+  
+}

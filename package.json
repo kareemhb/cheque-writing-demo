@@ -1,0 +1,35 @@
+{
+  "name": "Kareem-Bassiouni",
+  "version": "1.0.0",
+  "description": "LGAQ Test",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "sass"
+  ],
+  "author": "Kareem",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "basic-auth-connect": "^1.0.0",
+    "browser-sync": "^2.26.14",
+    "connect-modrewrite": "^0.10.2",
+    "express": "^4.17.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.1.1",
+    "gulp-headerfooter": "^1.0.3",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-inject-string": "^1.1.2",
+    "gulp-order": "^1.2.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1",
+    "sphp": "^0.6.3",
+    "uglify-save-license": "^0.4.1"
+  }
+}

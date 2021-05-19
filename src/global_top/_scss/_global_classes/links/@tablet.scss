@@ -1,0 +1,15 @@
+
+
+//Link with right arrow on hover - no hover effect on tablet onward
+.arrow_link{
+  
+  &--tab-fixed{
+    &:after{
+      display:none;
+    }
+    &:hover{
+      left:0;
+    }
+  }
+
+}

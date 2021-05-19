@@ -1,0 +1,34 @@
+
+
+
+//Global button
+@mixin btn($color){
+  @include shadow(0 2px 8px 0 rgba(lighten($color,20%),0.3));
+  background-color:$color;
+  
+  &:hover{
+    @include shadow(0 6px 20px 0 rgba(darken($color,10%),0.4));
+    background-color:lighten($color,10%);
+  }
+}
+
+//Classes
+.btn{
+  @include box;
+  @include ease-it(0.5,(box-shadow,background-color));
+  @include rounded(4px);
+  cursor:pointer;
+  font-size: 1.1em;
+  font-weight:700;
+  padding:8px 20px;
+  position:relative;
+  top:0;
+  
+  //Color Modifiers
+  &--blue{
+    @include btn($blue-d);
+    color:#fff;
+  }
+  
+  //more button color modifiers can be added here
+}

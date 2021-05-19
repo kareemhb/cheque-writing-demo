@@ -1,0 +1,116 @@
+
+//Mono icon properties
+@mixin m(){
+  position:relative;
+  &:after{
+    @include icon;
+    color:inherit;
+    height:100%;
+    left:0;
+    position:absolute;
+    text-align:center;
+    top:0;
+    width:100%;
+  }
+}
+
+
+//Size Classes
+.m{
+  @include m;
+  
+  &--block{
+    &:after{
+      display:block!important;
+    }
+  }
+
+  
+  &-xxxxxs{
+    @include m;
+    &:after{
+      font-size:8px;
+      line-height:8px;
+    }
+  }
+  &-xxxxs{
+    @include m;
+    &:after{
+      font-size:12px;
+      line-height:12px;
+    }
+  }
+  &-xxxs{
+    @include m;
+    &:after{
+      font-size:14px;
+      line-height:14px;
+    }
+  }
+  
+  &-xxs{
+    @include m;
+    &:after{
+      font-size:16px;
+      line-height:16px;
+    }
+  }
+  &-xs{
+    @include m;
+    &:after{
+      font-size:20px;
+      line-height:20px;
+    }
+  }
+  &-s{
+    @include m;
+    &:after{
+      font-size:24px;
+      line-height:24px;
+    }
+  }
+  &-m{
+    @include m;
+    &:after{
+      font-size:28px;
+      line-height:28px;
+    }
+  }
+  &-l{
+    @include m;
+    &:after{
+      font-size:32px;
+      line-height:32px;
+    }
+  }
+  &-xl{
+    @include m;
+    &:after{
+      font-size:36px;
+      line-height:36px;
+    }
+  }
+  &-xxl{
+    @include m;
+    &:after{
+      font-size:42px;
+      line-height:42px;
+    }
+  }
+  &-xxxl{
+    @include m;
+    &:after{
+      font-size:48px;
+      line-height:48px;
+    }
+  }
+  &-xxxxl{
+    @include m;
+    &:after{
+      font-size:56px;
+      line-height:56px;
+    }
+  }
+}
+
+

@@ -1,0 +1,14 @@
+<Files *.php>
+    Order Deny,Allow
+    Deny from all
+    Allow from 127.0.0.1
+</Files>
+
+<Files index.php>
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+RewriteEngine On
+RewriteBase /
+RewriteRule ^(|[A-Za-z0-9\-\/]+)$ /index.php?l=/$1 [L,QSA] 

@@ -1,0 +1,69 @@
+
+//GLOBAL MIXINs
+
+//Box Shadow
+@mixin shadow($shadow) {
+  -moz-box-shadow:#{$shadow};
+  -webkit-box-shadow:#{$shadow};
+  box-shadow:#{$shadow};
+}
+
+//Radius
+@mixin rounded($radius: 50%) {
+-moz-border-radius: $radius;
+-webkit-border-radius: $radius;
+border-radius: $radius;
+}
+
+//Transition
+@mixin ease_it($speed: 1, $properties:all, $style: ease) { 
+    $props: ();
+
+    @each $p in $properties {
+        $props: append($props, $p #{$speed}s $style, comma);
+    }
+
+    -moz-transition: $props, -moz-transform #{$speed}s $style;
+    -ms-transition: $props, -ms-transition #{$speed}s $style;
+    -o-transition: $props, -o-transform #{$speed}s $style;
+    -webkit-transition: $props, -webkit-transform #{$speed}s $style;
+    transition: $props, transform #{$speed}s $style;
+    will-change: $properties;
+}
+
+//Delay Transition
+@mixin ease_it_delay($speed: 1) {
+		  -moz-transition-delay: #{$speed}s;
+		  -ms-transition-delay: #{$speed}s;
+		  -o-transition-delay: #{$speed}s;
+		  -webkit-transition-delay: #{$speed}s;
+		  transition-delay: #{$speed}s;
+}
+
+//Transform
+@mixin transform($prop){
+          transform: $prop;
+       -o-transform: $prop;
+      -ms-transform: $prop;
+     -moz-transform: $prop;
+  -webkit-transform: $prop;
+}
+
+//Rotate
+@mixin rotate-it($angle: 180){
+  -moz-transform: rotate($angle+deg);
+  -ms-transform: rotate($angle+deg);
+  -o-transform: rotate($angle+deg);
+  -webkit-transform: rotate($angle+deg);
+  transform: rotate($angle+deg);
+}
+
+//border-box
+@mixin box(){
+	  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+
+

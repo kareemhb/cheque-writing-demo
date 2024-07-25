@@ -6,6 +6,6 @@
 - Sass
 - icomoon
 
-UI: https://kareem.com.au/
+UI: https://lgaq.kareem.com.au
 
-Full Documentation: https://kareem.com.au/documentation
+Full Documentation: https://lgaq.kareem.com.au/documentation
